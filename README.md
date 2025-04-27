@@ -79,29 +79,30 @@ This is suitable for initial development and testing but needs to be replaced wi
 ## Screenshots
 
 
+
 **Login Form:**
-![Login Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\login.png)
+![Login Form](images/login.jpg)
 
 **Dashboard :**
-![Student Dashboard](C:\Users\ahmed\OneDrive\Desktop\screenshots\dashboard.jpg)
+![Student Dashboard](images/dashboard.jpg)
 
 **Admin Panel:**
-![Admin Panel](C:\Users\ahmed\OneDrive\Desktop\screenshots\adminPanel.jpg)
+![Admin Panel](images/adminPanel.jpg)
 
 **Add/Edit Question Form:**
-![Add/Edit Question Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\addNewQuestion.jpg)
+![Add/Edit Question Form](images/addNewQuestion.jpg)
 
 **Update Questions Form:**
-![Update Questions Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\updateQuestion.jpg)
+![Update Questions Form](images/updateQuestion.jpg)
 
 **Quiz Form:**
-![Quiz Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\quizForm.jpg)
+![Quiz Form](images/quizForm.jpg)
 
 **Settings Form (Data Tab):**
-![Settings Form Data](C:\Users\ahmed\OneDrive\Desktop\screenshots\adminSettings_dataManagement.jpg)
+![Settings Form Data](images/adminSettings_dataManagement.jpg)
 
 **Settings Form (Quiz Rules Tab):**
-![Settings Form Quiz](C:\Users\ahmed\OneDrive\Desktop\screenshots\adminSettings_quizRules.jpg)
+![Settings Form Quiz](images/adminSettings_quizRules.jpg)
 
 ## Future Improvements
 
