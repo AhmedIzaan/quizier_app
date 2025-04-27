@@ -78,10 +78,9 @@ This is suitable for initial development and testing but needs to be replaced wi
 
 ## Screenshots
 
-*(Add screenshots of key forms here. Place image files in a subfolder like `docs/images/` or similar and update the paths below.)*
 
 **Login Form:**
-![Login Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\login.jpg)
+![Login Form](C:\Users\ahmed\OneDrive\Desktop\screenshots\login.png)
 
 **Dashboard :**
 ![Student Dashboard](C:\Users\ahmed\OneDrive\Desktop\screenshots\dashboard.jpg)
