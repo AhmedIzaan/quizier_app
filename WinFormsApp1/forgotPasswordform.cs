@@ -31,7 +31,7 @@ namespace QuizierApp
                 return;
             }
 
-            // finding the user by username
+           
             var user = LoginForm.Users.FirstOrDefault(u => u.Username == username);
             if (user == null)
             {
@@ -39,7 +39,7 @@ namespace QuizierApp
                 return;
             }
 
-            // Updating the password
+            
             user.Password = newPassword;
             MessageBox.Show("Password updated successfully!");
 

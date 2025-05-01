@@ -41,21 +41,20 @@ namespace QuizierApp
             // Dark background
             this.BackColor = Color.FromArgb(45, 45, 45);
 
-            // We'll define some helper variables for layout
             int centerX = this.ClientSize.Width / 2;
 
             // ----- PictureBox (Logo) -----
             this.pbLogo = new PictureBox();
-            // Update the path & filename to your actual image
+            
             string logoPath = @"C:\Users\ahmed\OneDrive\Pictures\logo\quizierLogo.png";
             this.pbLogo.Image = Image.FromFile(logoPath);
             this.pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            // Make the logo bigger
+            
             this.pbLogo.Size = new Size(200, 200);
 
-            // Place the logo near the top center
+           
             int logoX = centerX - (this.pbLogo.Width / 2);
-            int logoY = 50; // 50px from top
+            int logoY = 50; 
             this.pbLogo.Location = new Point(logoX, logoY);
             this.Controls.Add(this.pbLogo);
 
@@ -66,16 +65,16 @@ namespace QuizierApp
 #endif
             this.txtUsername.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             this.txtUsername.Size = new Size(400, 40);
-            // Center horizontally, place below logo
+            
             int textBoxX = centerX - (this.txtUsername.Width / 2);
             int textBoxY = logoY + this.pbLogo.Height + 40;
             this.txtUsername.Location = new Point(textBoxX, textBoxY);
-            // Optional: white text, dark background
+            
             this.txtUsername.ForeColor = Color.White;
             this.txtUsername.BackColor = Color.FromArgb(60, 60, 60);
             this.Controls.Add(this.txtUsername);
 
-            // ----- New Password TextBox -----
+           
             this.txtNewPassword = new TextBox();
 #if NET6_0_OR_GREATER
             this.txtNewPassword.PlaceholderText = "new password";
@@ -88,7 +87,7 @@ namespace QuizierApp
             this.txtNewPassword.BackColor = Color.FromArgb(60, 60, 60);
             this.Controls.Add(this.txtNewPassword);
 
-            // ----- Confirm Password TextBox -----
+           
             this.txtConfirmPassword = new TextBox();
 #if NET6_0_OR_GREATER
             this.txtConfirmPassword.PlaceholderText = "confirm password";
@@ -101,17 +100,17 @@ namespace QuizierApp
             this.txtConfirmPassword.BackColor = Color.FromArgb(60, 60, 60);
             this.Controls.Add(this.txtConfirmPassword);
 
-            // ----- Submit Button -----
+            
             this.btnSubmit = new Button();
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             this.btnSubmit.Size = new Size(120, 40);
-            // Place below confirm password
+            
             int submitY = textBoxY + 180;
             this.btnSubmit.Location = new Point(centerX - (this.btnSubmit.Width / 2), submitY);
-            // Wire up click event (defined in ForgotPasswordForm.cs)
+            
             this.btnSubmit.Click += new EventHandler(this.btnSubmit_Click);
-            // Optional: white text, dark background
+           
             this.btnSubmit.ForeColor = Color.White;
             this.btnSubmit.BackColor = Color.FromArgb(60, 60, 60);
             this.Controls.Add(this.btnSubmit);

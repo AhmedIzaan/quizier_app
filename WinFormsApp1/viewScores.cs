@@ -2,28 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Linq; // For OrderBy
+using System.Linq; 
 
 namespace QuizierApp
 {
     public partial class ViewScoresForm : Form
     {
-        // Store a reference or copy of the scores passed in
+        
         private readonly List<QuizResult> _scores;
 
         public ViewScoresForm(List<QuizResult> allScores)
         {
             InitializeComponent();
-            // It's often safer to work with a copy or filtered/ordered list
-            _scores = allScores.OrderByDescending(s => s.DateTaken).ToList(); // Show newest first
+           
+            _scores = allScores.OrderByDescending(s => s.DateTaken).ToList(); 
             LoadScores();
         }
 
         private void LoadScores()
         {
-            // Configure DataGridView columns (can also be done in designer)
-            dgvScores.AutoGenerateColumns = false; // Important! Define columns manually
-            dgvScores.Columns.Clear(); // Clear existing columns if any
+           
+            dgvScores.AutoGenerateColumns = false; 
+            dgvScores.Columns.Clear(); 
 
             dgvScores.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -69,17 +69,17 @@ namespace QuizierApp
                 DataPropertyName = "DateTaken",
                 HeaderText = "Date Taken",
                 Width = 140,
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "g" } // General date/time short time
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "g" } 
             });
 
 
-            // Set the DataSource
+           
             dgvScores.DataSource = _scores;
 
-            // Optional: Adjust other grid properties
+            
             dgvScores.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             dgvScores.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dgvScores.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(55, 55, 55); // Darker alternating rows
+            dgvScores.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(55, 55, 55); 
             dgvScores.BackgroundColor = System.Drawing.Color.FromArgb(60, 60, 60);
             dgvScores.GridColor = System.Drawing.Color.Gray;
 
@@ -91,7 +91,7 @@ namespace QuizierApp
         }
 
         #region Windows Form Designer generated code
-        // (Generate via designer)
+       
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -155,7 +155,7 @@ namespace QuizierApp
             this.dgvScores.ReadOnly = true;
             this.dgvScores.RowHeadersVisible = false;
             this.dgvScores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvScores.Size = new System.Drawing.Size(720, 350); // Example size
+            this.dgvScores.Size = new System.Drawing.Size(720, 350);
             this.dgvScores.TabIndex = 1;
             //
             // btnCloseScores
@@ -166,7 +166,7 @@ namespace QuizierApp
             this.btnCloseScores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseScores.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnCloseScores.ForeColor = System.Drawing.Color.White;
-            this.btnCloseScores.Location = new System.Drawing.Point(650, 425); // Position bottom right
+            this.btnCloseScores.Location = new System.Drawing.Point(650, 425);
             this.btnCloseScores.Name = "btnCloseScores";
             this.btnCloseScores.Size = new System.Drawing.Size(100, 35);
             this.btnCloseScores.TabIndex = 2;
@@ -180,11 +180,11 @@ namespace QuizierApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.CancelButton = this.btnCloseScores;
-            this.ClientSize = new System.Drawing.Size(784, 481); // Example size
+            this.ClientSize = new System.Drawing.Size(784, 481); 
             this.Controls.Add(this.btnCloseScores);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.label1);
-            this.MinimumSize = new System.Drawing.Size(600, 400); // Minimum size
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "ViewScoresForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View Scores";

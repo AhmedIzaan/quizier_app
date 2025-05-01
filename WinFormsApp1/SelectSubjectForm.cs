@@ -10,7 +10,7 @@ namespace QuizierApp
     public partial class SelectSubjectForm : Form
     {
         private readonly List<Question> _allQuestions;
-        private readonly User _currentUser; // User taking the quiz
+        private readonly User _currentUser; 
 
         public SelectSubjectForm(List<Question> allQuestions, User currentUser)
         {
@@ -23,11 +23,10 @@ namespace QuizierApp
         private void PopulateSubjects()
         {
             cmbQuizSubjects.Items.Clear();
-            cmbQuizSubjects.Items.Add("-- Select a Subject --"); // Placeholder
+            cmbQuizSubjects.Items.Add("-- Select a Subject --");
 
             if (_allQuestions != null && _allQuestions.Any())
             {
-                // Get distinct subjects that actually have questions
                 var subjects = _allQuestions
                                  .Select(q => q.Subject)
                                  .Distinct(StringComparer.OrdinalIgnoreCase)
@@ -40,13 +39,13 @@ namespace QuizierApp
                 }
             }
 
-            cmbQuizSubjects.SelectedIndex = 0; // Select the placeholder
+            cmbQuizSubjects.SelectedIndex = 0; 
 
-            // Disable start button if no real subjects are available
+            
             btnStartQuiz.Enabled = cmbQuizSubjects.Items.Count > 1;
             if (!btnStartQuiz.Enabled)
             {
-                cmbQuizSubjects.Items.Clear(); // Clear if disabled
+                cmbQuizSubjects.Items.Clear(); 
                 cmbQuizSubjects.Items.Add("[No Subjects Available]");
                 cmbQuizSubjects.SelectedIndex = 0;
                 cmbQuizSubjects.Enabled = false;
@@ -55,7 +54,7 @@ namespace QuizierApp
 
         private void btnStartQuiz_Click(object sender, EventArgs e)
         {
-            if (cmbQuizSubjects.SelectedIndex <= 0) // Check if placeholder is selected
+            if (cmbQuizSubjects.SelectedIndex <= 0) 
             {
                 MessageBox.Show("Please select a subject to start the quiz.", "Subject Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -63,10 +62,10 @@ namespace QuizierApp
 
             string selectedSubject = cmbQuizSubjects.SelectedItem.ToString();
 
-            // Filter questions for the selected subject BEFORE opening the quiz form
+            
             List<Question> questionsForQuiz = _allQuestions
                 .Where(q => q.Subject.Equals(selectedSubject, StringComparison.OrdinalIgnoreCase))
-                .ToList(); // Consider shuffling these later for randomness
+                .ToList(); 
 
             if (!questionsForQuiz.Any())
             {
@@ -77,10 +76,10 @@ namespace QuizierApp
 
             // --- Start the Actual Quiz ---
             QuizForm quizForm = new QuizForm(selectedSubject, _currentUser.Username, questionsForQuiz);
-            quizForm.ShowDialog(this.Owner); // Show quiz modal relative to Dashboard
+            quizForm.ShowDialog(this.Owner); 
 
-            // Quiz is complete, just close the selection form
-            this.DialogResult = DialogResult.OK; // Indicate successful start
+          
+            this.DialogResult = DialogResult.OK; 
             this.Close();
         }
 
@@ -90,9 +89,9 @@ namespace QuizierApp
             this.Close();
         }
 
-        // --- Add InitializeComponent and control declarations ---
+ 
         #region Windows Form Designer generated code
-        // (Generate this via the designer - basic layout)
+      
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();

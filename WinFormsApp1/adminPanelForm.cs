@@ -1,32 +1,26 @@
 ﻿using System;
-using System.Collections.Generic; // Required for List<>
+using System.Collections.Generic; 
 using System.Drawing;
 using System.Windows.Forms;
-// using Microsoft.VisualBasic; // <<< Already removed
-using System.Linq; // Required for Any() if used elsewhere
+
+using System.Linq; 
 
 namespace QuizierApp
 {
     public partial class AdminPanelForm : Form
     {
-        // --- Control declarations (ADD btnSettings) ---
+       
         private PictureBox pbLogo;
         private ComboBox cmbSubjects;
         private Button btnAddQuestions;
         private Button btnUpdateQuestions;
-        private Button btnSettings; // <<< ADD THIS DECLARATION
+        private Button btnSettings; 
 
-        // --- REMOVED Verification Flag ---
-
+       
         public AdminPanelForm()
         {
             InitializeComponent();
         }
-
-        // --- REMOVED Load Event Handler ---
-
-
-        // --- Button Click Handlers (No verification checks) ---
 
         private void btnAddQuestions_Click(object sender, EventArgs e)
         {
@@ -49,38 +43,36 @@ namespace QuizierApp
             updateForm.ShowDialog(this);
         }
 
-        // --- UPDATED btnSettings_Click (removed verification check) ---
+        
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            // --- REMOVE Verification Check ---
-            // if (!_isVerified) return; // <<< REMOVE THIS LINE
-
+            
             SettingsForm settingsForm = new SettingsForm();
-            settingsForm.ShowDialog(this); // Show as modal dialog relative to Admin Panel
+            settingsForm.ShowDialog(this); 
         }
 
-        // --- InitializeComponent Method (Adding btnSettings) ---
+        
         private void InitializeComponent()
         {
-            // --- Keep all your existing control initializations ---
-            this.ClientSize = new Size(1366, 768); // Consider making this smaller if only admin controls
+            
+            this.ClientSize = new Size(1366, 768); 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.StartPosition = FormStartPosition.CenterParent;
             this.Text = "Admin Panel";
             this.BackColor = Color.FromArgb(45, 45, 45);
 
-            int centerX = this.ClientSize.Width / 2; // Center based on form size
-            int buttonWidth = 150; // Standardize button width
-            int buttonHeight = 40; // Standardize button height
-            int verticalSpacing = 20; // Space between buttons
+            int centerX = this.ClientSize.Width / 2; 
+            int buttonWidth = 150; 
+            int buttonHeight = 40; 
+            int verticalSpacing = 20; 
 
             // --- Logo ---
             this.pbLogo = new PictureBox();
             try { this.pbLogo.Image = Image.FromFile(@"C:\Users\ahmed\OneDrive\Pictures\logo\quizierLogo.png"); }
-            catch (Exception ex) { /* Handle error */ this.pbLogo.BackColor = Color.DarkGray; }
+            catch (Exception ex) {  this.pbLogo.BackColor = Color.DarkGray; }
             this.pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            this.pbLogo.Size = new Size(200, 200); // Logo Size
-            this.pbLogo.Location = new Point(centerX - (pbLogo.Width / 2), 50); // Position Logo
+            this.pbLogo.Size = new Size(200, 200); 
+            this.pbLogo.Location = new Point(centerX - (pbLogo.Width / 2), 50); 
             this.Controls.Add(this.pbLogo);
 
             // --- Subjects ComboBox ---
@@ -123,7 +115,6 @@ namespace QuizierApp
             this.btnUpdateQuestions.Click += new System.EventHandler(this.btnUpdateQuestions_Click);
             this.Controls.Add(this.btnUpdateQuestions);
 
-            // --- Settings Button --- <<< ADD THIS SECTION >>>
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnSettings.Text = "Settings";
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -132,23 +123,20 @@ namespace QuizierApp
             this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80))))); // Style consistency
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.FlatAppearance.BorderSize = 0; // Style consistency
-            // *** Wire up the event handler ***
+            this.btnSettings.FlatAppearance.BorderSize = 0; 
+            
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // *** Add the button to the form's controls ***
+          
             this.Controls.Add(this.btnSettings);
-            // --- END ADDED SECTION ---
-
-
-            // --- Assign Names ---
+           
             this.pbLogo.Name = "pbLogo";
             this.cmbSubjects.Name = "cmbSubjects";
             this.btnAddQuestions.Name = "btnAddQuestions";
             this.btnUpdateQuestions.Name = "btnUpdateQuestions";
-            this.btnSettings.Name = "btnSettings"; // <<< ASSIGN NAME FOR SETTINGS BUTTON
+            this.btnSettings.Name = "btnSettings"; 
 
-            // --- REMOVED Load event subscription ---
+           
         }
 
-    } // End of AdminPanelForm class
-} // End of namespace
+    } 
+} 

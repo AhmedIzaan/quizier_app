@@ -11,7 +11,7 @@ namespace QuizierApp
         public int TotalQuestions { get; set; }
         public DateTime DateTaken { get; set; }
 
-        // Optional: Calculated property for percentage
+       
         public double Percentage
         {
             get
@@ -20,7 +20,7 @@ namespace QuizierApp
             }
         }
 
-        // Constructor (optional but helpful)
+       
         public QuizResult(string username, string subject, int score, int totalQuestions, DateTime dateTaken)
         {
             Username = username;
@@ -30,10 +30,9 @@ namespace QuizierApp
             DateTaken = dateTaken;
         }
 
-        // Parameterless constructor (needed for some scenarios)
+        
         public QuizResult() { }
 
-        // Override ToString for potential simple display later
         public override string ToString()
         {
             return $"{Username} - {Subject}: {Score}/{TotalQuestions} ({Percentage:F1}%) on {DateTaken:g}";

@@ -3,14 +3,9 @@ namespace QuizierApp
 {
     partial class SettingsForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+       
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -23,10 +18,7 @@ namespace QuizierApp
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+       
         private void InitializeComponent()
         {
             this.tabControlSettings = new System.Windows.Forms.TabControl();
@@ -147,7 +139,6 @@ namespace QuizierApp
             this.btnClearQuestions.TabIndex = 0;
             this.btnClearQuestions.Text = "Clear All Questions";
             this.btnClearQuestions.UseVisualStyleBackColor = false;
-            // Click handler assigned in code-behind
             //
             // grpExport
             //
@@ -247,7 +238,7 @@ namespace QuizierApp
             this.btnImport.TabIndex = 4;
             this.btnImport.Text = "Import Now";
             this.btnImport.UseVisualStyleBackColor = false;
-            // Click handler assigned in code-behind
+         
             //
             // btnBrowseImport
             //
@@ -262,7 +253,7 @@ namespace QuizierApp
             this.btnBrowseImport.TabIndex = 3;
             this.btnBrowseImport.Text = "Browse...";
             this.btnBrowseImport.UseVisualStyleBackColor = false;
-            // Click handler assigned in code-behind
+      
             //
             // txtImportFilePath
             //
@@ -331,7 +322,7 @@ namespace QuizierApp
             this.chkRandomizeQuestions.TabIndex = 0;
             this.chkRandomizeQuestions.Text = "Randomize question order during quiz";
             this.chkRandomizeQuestions.UseVisualStyleBackColor = true;
-            // CheckedChanged handler assigned in code-behind
+         
             //
             // grpTimeLimit
             //
@@ -371,7 +362,7 @@ namespace QuizierApp
             this.numTimeLimit.Size = new System.Drawing.Size(67, 23);
             this.numTimeLimit.TabIndex = 1;
             this.numTimeLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // ValueChanged handler assigned in code-behind
+        
             //
             // labelTimeLimit
             //
@@ -396,7 +387,7 @@ namespace QuizierApp
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            // Click handler assigned in code-behind
+            
             //
             // openFileDialogImport
             //

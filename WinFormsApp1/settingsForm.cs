@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO; // Required for File operations
+using System.IO;
 using System.Linq;
-using System.Text; // Required for StringBuilder (optional, but good for export)
+using System.Text; 
 using System.Windows.Forms;
 
 namespace QuizierApp
@@ -19,14 +19,14 @@ namespace QuizierApp
             AttachEventHandlers();
         }
 
-        // Load current settings from AppData into controls
+        
         private void LoadSettings()
         {
-            numTimeLimit.Value = Math.Max(numTimeLimit.Minimum, Math.Min(numTimeLimit.Maximum, AppData.QuizTimeLimitMinutes)); // Clamp value within range
+            numTimeLimit.Value = Math.Max(numTimeLimit.Minimum, Math.Min(numTimeLimit.Maximum, AppData.QuizTimeLimitMinutes)); 
             chkRandomizeQuestions.Checked = AppData.RandomizeQuestions;
         }
 
-        // Explicitly attach event handlers (safer than relying only on Designer)
+     
         private void AttachEventHandlers()
         {
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -70,30 +70,28 @@ namespace QuizierApp
             try
             {
                 string[] lines = File.ReadAllLines(filePath);
-                if (lines.Length <= 1) // Check if file has more than just potentially a header
+                if (lines.Length <= 1) 
                 {
                     MessageBox.Show("The selected file is empty or contains only a header row.", "Empty File", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
 
-                // Start from line 1 to skip potential header
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    // Basic check for header row (adjust if your header is different or guaranteed)
+                    
                     if (i == 0 && lines[i].ToLowerInvariant().Contains("subject") && lines[i].ToLowerInvariant().Contains("questiontext"))
                     {
                         Console.WriteLine("Skipping detected header row.");
-                        continue; // Skip header row if detected
+                        continue; 
                     }
 
                     string line = lines[i];
-                    if (string.IsNullOrWhiteSpace(line)) continue; // Skip empty lines
+                    if (string.IsNullOrWhiteSpace(line)) continue; 
 
-                    string[] parts = line.Split(','); // Simple CSV split - Need more robust parsing for fields with commas
+                    string[] parts = line.Split(','); 
 
-                    // CRITICAL: This assumes fields do NOT contain commas.
-                    // For robust CSV, use a library or manual parsing with quote handling.
+
                     if (parts.Length != 7)
                     {
                         errorMessages.Add($"Line {i + 1}: Invalid number of columns (Expected 7, Found {parts.Length}). Line skipped.");
@@ -128,16 +126,15 @@ namespace QuizierApp
 
                     char correctLetter = correctLetterStr[0];
 
-                    // Assuming Question constructor: Question(subject, text, optA, optB, optC, optD, correctLetter)
-                    // Adjust if your constructor is different!
+                   
+             
                     questionsToAdd.Add(new Question(subject, qText, optA, optB, optC, optD, correctLetter));
                     importedCount++;
                 }
 
-                // Add successfully parsed questions to the main list
+              
                 AppData.AllQuestions.AddRange(questionsToAdd);
 
-                // Report Results
                 StringBuilder report = new StringBuilder();
                 report.AppendLine($"Import process finished.");
                 report.AppendLine($"Successfully imported: {importedCount} question(s).");
@@ -146,7 +143,6 @@ namespace QuizierApp
                 if (errorMessages.Any())
                 {
                     report.AppendLine("\nErrors:");
-                    // Show only first few errors to prevent huge message box
                     errorMessages.Take(10).ToList().ForEach(em => report.AppendLine($"- {em}"));
                     if (errorMessages.Count > 10) report.AppendLine("... (more errors truncated)");
                 }
@@ -187,24 +183,22 @@ namespace QuizierApp
             {
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    // Write Header
                     writer.WriteLine("Subject,QuestionText,OptionA,OptionB,OptionC,OptionD,CorrectAnswerLetter");
 
-                    // Write Questions
                     foreach (var q in AppData.AllQuestions)
                     {
-                        // Use helper to handle potential commas in fields
+                       
                         writer.WriteLine(string.Join(",",
                             EscapeCsvField(q.Subject),
-                            EscapeCsvField(q.QuestionText), // Assumes QuestionText property exists
-                            EscapeCsvField(q.OptionA),       // Assumes OptionA exists
-                            EscapeCsvField(q.OptionB),       // Assumes OptionB exists
-                            EscapeCsvField(q.OptionC),       // Assumes OptionC exists
-                            EscapeCsvField(q.OptionD),       // Assumes OptionD exists
-                            q.CorrectAnswerLetter             // Single char doesn't need escaping
+                            EscapeCsvField(q.QuestionText), 
+                            EscapeCsvField(q.OptionA),      
+                            EscapeCsvField(q.OptionB),      
+                            EscapeCsvField(q.OptionC),      
+                            EscapeCsvField(q.OptionD),      
+                            q.CorrectAnswerLetter           
                         ));
                     }
-                } // StreamWriter disposed automatically here
+                } 
 
                 MessageBox.Show($"Successfully exported {AppData.AllQuestions.Count} questions to:\n{filePath}", "Export Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -215,14 +209,14 @@ namespace QuizierApp
             }
         }
 
-        // Helper function to escape CSV fields containing commas or quotes
+        
         private string EscapeCsvField(string field)
         {
             if (string.IsNullOrEmpty(field)) return "";
-            // If the field contains a comma, a double quote, or a newline, enclose in double quotes
+            
             if (field.Contains(",") || field.Contains("\"") || field.Contains("\n") || field.Contains("\r"))
             {
-                // Escape existing double quotes by doubling them up
+                
                 return $"\"{field.Replace("\"", "\"\"")}\"";
             }
             return field;
@@ -253,7 +247,7 @@ namespace QuizierApp
                 {
                     AppData.AllQuestions.Clear();
                     MessageBox.Show("All questions have been cleared.", "Questions Cleared", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // You might want to update UI elements elsewhere if they depend on questions
+                    
                 }
             }
         }
@@ -282,7 +276,7 @@ namespace QuizierApp
                 {
                     AppData.AllScores.Clear();
                     MessageBox.Show("All scores have been cleared.", "Scores Cleared", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // You might want to update UI elements elsewhere if they depend on scores
+                    
                 }
             }
         }
@@ -291,13 +285,13 @@ namespace QuizierApp
 
         private void numTimeLimit_ValueChanged(object sender, EventArgs e)
         {
-            // Save setting immediately when value changes
+            
             AppData.QuizTimeLimitMinutes = (int)numTimeLimit.Value;
         }
 
         private void chkRandomizeQuestions_CheckedChanged(object sender, EventArgs e)
         {
-            // Save setting immediately when checked state changes
+            
             AppData.RandomizeQuestions = chkRandomizeQuestions.Checked;
         }
 

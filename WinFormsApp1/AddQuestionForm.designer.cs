@@ -2,14 +2,10 @@
 {
     partial class AddQuestionForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+       
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
+
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -22,10 +18,7 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+      
         private void InitializeComponent()
         {
             // --- Instantiating Controls ---
@@ -42,14 +35,14 @@
             this.lblOptionD = new System.Windows.Forms.Label();
             this.txtOptionD = new System.Windows.Forms.TextBox();
             this.gbCorrectAnswer = new System.Windows.Forms.GroupBox();
-            this.rbCorrectD = new System.Windows.Forms.RadioButton(); // Declare D first for TabIndex flow
+            this.rbCorrectD = new System.Windows.Forms.RadioButton();
             this.rbCorrectC = new System.Windows.Forms.RadioButton();
             this.rbCorrectB = new System.Windows.Forms.RadioButton();
             this.rbCorrectA = new System.Windows.Forms.RadioButton();
             this.btnSaveQuestion = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.gbCorrectAnswer.SuspendLayout(); // GroupBox needs Suspend/Resume
-            this.SuspendLayout(); // Form needs Suspend/Resume
+            this.gbCorrectAnswer.SuspendLayout(); 
+            this.SuspendLayout(); 
 
             //
             // lblSubjectInfo
@@ -57,23 +50,23 @@
             this.lblSubjectInfo.AutoSize = true;
             this.lblSubjectInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubjectInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220))))); // Light gray text
-            this.lblSubjectInfo.Location = new System.Drawing.Point(25, 22); // Adjusted position
+            this.lblSubjectInfo.Location = new System.Drawing.Point(25, 22); 
             this.lblSubjectInfo.Name = "lblSubjectInfo";
             this.lblSubjectInfo.Size = new System.Drawing.Size(53, 17);
-            this.lblSubjectInfo.TabIndex = 0; // Tab index starts here
+            this.lblSubjectInfo.TabIndex = 0; 
             this.lblSubjectInfo.Text = "Subject:";
 
             //
             // lblSubjectName
             //
-            this.lblSubjectName.AutoSize = false; // Set to false to control width if needed later
+            this.lblSubjectName.AutoSize = false;
             this.lblSubjectName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubjectName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(255))))); // Light blue text
             this.lblSubjectName.Location = new System.Drawing.Point(84, 22);
             this.lblSubjectName.Name = "lblSubjectName";
-            this.lblSubjectName.Size = new System.Drawing.Size(450, 17); // Give it some width
+            this.lblSubjectName.Size = new System.Drawing.Size(450, 17); 
             this.lblSubjectName.TabIndex = 1;
-            this.lblSubjectName.Text = "[Subject Name Placeholder]"; // Placeholder text
+            this.lblSubjectName.Text = "[Subject Name Placeholder]"; 
 
             //
             // lblQuestion
@@ -91,17 +84,17 @@
             // txtQuestion
             //
             this.txtQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right))); // Anchor for resizing
+            | System.Windows.Forms.AnchorStyles.Right))); 
             this.txtQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60))))); // Darker background
             this.txtQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtQuestion.ForeColor = System.Drawing.Color.White; // White text
+            this.txtQuestion.ForeColor = System.Drawing.Color.White; 
             this.txtQuestion.Location = new System.Drawing.Point(28, 83);
-            this.txtQuestion.Multiline = true; // --- Make multiline ---
+            this.txtQuestion.Multiline = true; 
             this.txtQuestion.Name = "txtQuestion";
-            this.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical; // Add scrollbar
-            this.txtQuestion.Size = new System.Drawing.Size(525, 90); // Adjusted size and anchor
-            this.txtQuestion.TabIndex = 3; // Next tab index
+            this.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical; 
+            this.txtQuestion.Size = new System.Drawing.Size(525, 90); 
+            this.txtQuestion.TabIndex = 3; 
 
             //
             // lblOptionA
@@ -109,7 +102,7 @@
             this.lblOptionA.AutoSize = true;
             this.lblOptionA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblOptionA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblOptionA.Location = new System.Drawing.Point(25, 190); // Adjusted position
+            this.lblOptionA.Location = new System.Drawing.Point(25, 190); 
             this.lblOptionA.Name = "lblOptionA";
             this.lblOptionA.Size = new System.Drawing.Size(65, 17);
             this.lblOptionA.TabIndex = 4;
@@ -126,17 +119,17 @@
             this.txtOptionA.ForeColor = System.Drawing.Color.White;
             this.txtOptionA.Location = new System.Drawing.Point(96, 187);
             this.txtOptionA.Name = "txtOptionA";
-            this.txtOptionA.Size = new System.Drawing.Size(457, 25); // Adjusted size and anchor
+            this.txtOptionA.Size = new System.Drawing.Size(457, 25); 
             this.txtOptionA.TabIndex = 5;
 
-            // --- Option B, C, D - Similar styling ---
+           
             //
             // lblOptionB
             //
             this.lblOptionB.AutoSize = true;
             this.lblOptionB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblOptionB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblOptionB.Location = new System.Drawing.Point(25, 225); // Adjusted position
+            this.lblOptionB.Location = new System.Drawing.Point(25, 225); 
             this.lblOptionB.Name = "lblOptionB";
             this.lblOptionB.Size = new System.Drawing.Size(64, 17);
             this.lblOptionB.TabIndex = 6;
@@ -160,7 +153,7 @@
             this.lblOptionC.AutoSize = true;
             this.lblOptionC.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblOptionC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblOptionC.Location = new System.Drawing.Point(25, 260); // Adjusted position
+            this.lblOptionC.Location = new System.Drawing.Point(25, 260); 
             this.lblOptionC.Name = "lblOptionC";
             this.lblOptionC.Size = new System.Drawing.Size(65, 17);
             this.lblOptionC.TabIndex = 8;
@@ -184,7 +177,7 @@
             this.lblOptionD.AutoSize = true;
             this.lblOptionD.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblOptionD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.lblOptionD.Location = new System.Drawing.Point(25, 295); // Adjusted position
+            this.lblOptionD.Location = new System.Drawing.Point(25, 295); 
             this.lblOptionD.Name = "lblOptionD";
             this.lblOptionD.Size = new System.Drawing.Size(66, 17);
             this.lblOptionD.TabIndex = 10;
@@ -208,29 +201,29 @@
             //
             this.gbCorrectAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbCorrectAnswer.Controls.Add(this.rbCorrectD); // Add in reverse order for desired visual layout
+            this.gbCorrectAnswer.Controls.Add(this.rbCorrectD); 
             this.gbCorrectAnswer.Controls.Add(this.rbCorrectC);
             this.gbCorrectAnswer.Controls.Add(this.rbCorrectB);
             this.gbCorrectAnswer.Controls.Add(this.rbCorrectA);
             this.gbCorrectAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.gbCorrectAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220))))); // GroupBox text color
-            this.gbCorrectAnswer.Location = new System.Drawing.Point(28, 335); // Adjusted position
+            this.gbCorrectAnswer.Location = new System.Drawing.Point(28, 335); 
             this.gbCorrectAnswer.Name = "gbCorrectAnswer";
-            this.gbCorrectAnswer.Size = new System.Drawing.Size(525, 65); // Adjusted size
+            this.gbCorrectAnswer.Size = new System.Drawing.Size(525, 65); 
             this.gbCorrectAnswer.TabIndex = 12;
-            this.gbCorrectAnswer.TabStop = false; // GroupBox itself isn't a tab stop
+            this.gbCorrectAnswer.TabStop = false; 
             this.gbCorrectAnswer.Text = "Correct Answer";
 
             //
             // rbCorrectD
             //
-            this.rbCorrectD.AutoSize = true; // Let it size itself
-            this.rbCorrectD.Font = new System.Drawing.Font("Segoe UI", 9.75F); // Regular font for options
-            this.rbCorrectD.Location = new System.Drawing.Point(325, 28); // Adjusted position
+            this.rbCorrectD.AutoSize = true; 
+            this.rbCorrectD.Font = new System.Drawing.Font("Segoe UI", 9.75F); 
+            this.rbCorrectD.Location = new System.Drawing.Point(325, 28); 
             this.rbCorrectD.Name = "rbCorrectD";
             this.rbCorrectD.Size = new System.Drawing.Size(35, 21);
-            this.rbCorrectD.TabIndex = 3; // Tab index within group
-            this.rbCorrectD.TabStop = true; // Allow tabbing
+            this.rbCorrectD.TabIndex = 3; 
+            this.rbCorrectD.TabStop = true;
             this.rbCorrectD.Text = "D";
             this.rbCorrectD.UseVisualStyleBackColor = true;
 
@@ -239,7 +232,7 @@
             //
             this.rbCorrectC.AutoSize = true;
             this.rbCorrectC.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.rbCorrectC.Location = new System.Drawing.Point(225, 28); // Adjusted position
+            this.rbCorrectC.Location = new System.Drawing.Point(225, 28); 
             this.rbCorrectC.Name = "rbCorrectC";
             this.rbCorrectC.Size = new System.Drawing.Size(34, 21);
             this.rbCorrectC.TabIndex = 2;
@@ -252,7 +245,7 @@
             //
             this.rbCorrectB.AutoSize = true;
             this.rbCorrectB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.rbCorrectB.Location = new System.Drawing.Point(125, 28); // Adjusted position
+            this.rbCorrectB.Location = new System.Drawing.Point(125, 28); 
             this.rbCorrectB.Name = "rbCorrectB";
             this.rbCorrectB.Size = new System.Drawing.Size(34, 21);
             this.rbCorrectB.TabIndex = 1;
@@ -264,12 +257,12 @@
             // rbCorrectA
             //
             this.rbCorrectA.AutoSize = true;
-            this.rbCorrectA.Checked = true; // Default check
+            this.rbCorrectA.Checked = true; 
             this.rbCorrectA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.rbCorrectA.Location = new System.Drawing.Point(25, 28); // Adjusted position
+            this.rbCorrectA.Location = new System.Drawing.Point(25, 28); 
             this.rbCorrectA.Name = "rbCorrectA";
             this.rbCorrectA.Size = new System.Drawing.Size(34, 21);
-            this.rbCorrectA.TabIndex = 0; // First tab stop in group
+            this.rbCorrectA.TabIndex = 0;
             this.rbCorrectA.TabStop = true;
             this.rbCorrectA.Text = "A";
             this.rbCorrectA.UseVisualStyleBackColor = true;
@@ -280,49 +273,49 @@
             //
             this.btnSaveQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right))); // Anchor bottom-right
             this.btnSaveQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); // Greenish
-            this.btnSaveQuestion.FlatAppearance.BorderSize = 0; // No border for flat style
+            this.btnSaveQuestion.FlatAppearance.BorderSize = 0; 
             this.btnSaveQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveQuestion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnSaveQuestion.Location = new System.Drawing.Point(307, 420); // Adjusted position
+            this.btnSaveQuestion.Location = new System.Drawing.Point(307, 420); 
             this.btnSaveQuestion.Name = "btnSaveQuestion";
-            this.btnSaveQuestion.Size = new System.Drawing.Size(120, 35); // Adjusted size
-            this.btnSaveQuestion.TabIndex = 13; // Tab index after groupbox
-            this.btnSaveQuestion.Text = "Save"; // Text will be changed by code for Edit mode
-            this.btnSaveQuestion.UseVisualStyleBackColor = false; // Important for custom backcolor
-            this.btnSaveQuestion.Click += new System.EventHandler(this.btnSaveQuestion_Click); // Assign event handler
+            this.btnSaveQuestion.Size = new System.Drawing.Size(120, 35); 
+            this.btnSaveQuestion.TabIndex = 13; 
+            this.btnSaveQuestion.Text = "Save"; 
+            this.btnSaveQuestion.UseVisualStyleBackColor = false; 
+            this.btnSaveQuestion.Click += new System.EventHandler(this.btnSaveQuestion_Click); 
 
             //
             // btnCancel
             //
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100))))); // Dark Gray
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel; // Assign Cancel DialogResult
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel; 
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(433, 420); // Adjusted position
+            this.btnCancel.Location = new System.Drawing.Point(433, 420); 
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(120, 35); // Adjusted size
-            this.btnCancel.TabIndex = 14; // Last tab index
+            this.btnCancel.Size = new System.Drawing.Size(120, 35); 
+            this.btnCancel.TabIndex = 14; 
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click); // Assign event handler
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click); 
 
             //
             // AddQuestionForm
             //
-            this.AcceptButton = this.btnSaveQuestion; // Enter key triggers save/update
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F); // Base font scaling
+            this.AcceptButton = this.btnSaveQuestion; 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F); 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45))))); // Dark background
-            this.CancelButton = this.btnCancel; // Escape key triggers cancel
-            this.ClientSize = new System.Drawing.Size(584, 471); // Adjusted form size
-            this.Controls.Add(this.btnCancel); // Add controls to form
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45))))); 
+            this.CancelButton = this.btnCancel; 
+            this.ClientSize = new System.Drawing.Size(584, 471); 
+            this.Controls.Add(this.btnCancel); 
             this.Controls.Add(this.btnSaveQuestion);
             this.Controls.Add(this.gbCorrectAnswer);
-            this.Controls.Add(this.txtOptionD); // Add in reverse order of creation sometimes helps designer view
+            this.Controls.Add(this.txtOptionD); 
             this.Controls.Add(this.lblOptionD);
             this.Controls.Add(this.txtOptionC);
             this.Controls.Add(this.lblOptionC);
@@ -335,22 +328,22 @@
             this.Controls.Add(this.lblSubjectName);
             this.Controls.Add(this.lblSubjectInfo);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); // Set base font
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog; // Prevent resizing
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog; 
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddQuestionForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent; // Center relative to parent form
-            this.Text = "Add/Edit Question"; // Generic title, code will set specific
-            this.gbCorrectAnswer.ResumeLayout(false); // Resume GroupBox layout
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent; 
+            this.Text = "Add/Edit Question"; 
+            this.gbCorrectAnswer.ResumeLayout(false); 
             this.gbCorrectAnswer.PerformLayout();
-            this.ResumeLayout(false); // Resume Form layout
+            this.ResumeLayout(false); 
             this.PerformLayout();
 
         }
 
         #endregion
 
-        // --- Control Declarations (Keep these matching the above) ---
+     
         private System.Windows.Forms.Label lblSubjectInfo;
         private System.Windows.Forms.Label lblSubjectName;
         private System.Windows.Forms.Label lblQuestion;
@@ -364,7 +357,7 @@
         private System.Windows.Forms.Label lblOptionD;
         private System.Windows.Forms.TextBox txtOptionD;
         private System.Windows.Forms.GroupBox gbCorrectAnswer;
-        private System.Windows.Forms.RadioButton rbCorrectD; // Declaration order matches visual/tab order
+        private System.Windows.Forms.RadioButton rbCorrectD; 
         private System.Windows.Forms.RadioButton rbCorrectC;
         private System.Windows.Forms.RadioButton rbCorrectB;
         private System.Windows.Forms.RadioButton rbCorrectA;

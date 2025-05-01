@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Drawing; // Add for Color
+using System.Drawing; 
 
 namespace QuizierApp
 {
-    // Notice the 'partial' keyword allows splitting the class definition
+   
     public partial class QuizForm : Form
     {
-        // --- Fields for Quiz Logic ---
+       
         private readonly string _subject;
         private readonly string _username;
         private readonly List<Question> _quizQuestions;
@@ -19,42 +19,41 @@ namespace QuizierApp
         private int _score = 0;
 
         // --- Timer Variables ---
-        private System.Windows.Forms.Timer _quizTimer; // Full namespace used
+        private System.Windows.Forms.Timer _quizTimer; 
         private int _remainingSeconds;
         private bool _timeUp = false;
 
-        // --- Constructor ---
+       
         public QuizForm(string subject, string username, List<Question> questions)
         {
-            // This calls the method in QuizForm.Designer.cs
-            InitializeComponent(); // Creates controls including lblTimer
+            
+            InitializeComponent();
 
             _subject = subject;
             _username = username;
-            _quizQuestions = questions ?? new List<Question>(); // Ensure list isn't null
+            _quizQuestions = questions ?? new List<Question>(); 
             _userAnswers = new Dictionary<int, char?>();
 
-            // Initialize Timer (based on AppData)
+            
             InitializeQuizTimer();
 
-            // Initial Question Load
-            if (_quizQuestions.Any()) // Check if there are questions
+           
+            if (_quizQuestions.Any()) 
             {
                 LoadQuestion(_currentQuestionIndex);
             }
             else
             {
-                // Handle case with no questions passed
+              
                 MessageBox.Show("No questions available for this quiz.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Disable controls or close form
+               
                 gbOptions.Enabled = false;
                 btnNext.Enabled = false;
                 lblQuestionText.Text = "No questions loaded.";
-                // Consider closing: this.BeginInvoke(new Action(() => this.Close()));
+                
             }
 
 
-            // Attach FormClosing event (safer than in designer sometimes)
             this.FormClosing -= QuizForm_FormClosing; // Prevent double subscription
             this.FormClosing += QuizForm_FormClosing;
         }
@@ -64,11 +63,10 @@ namespace QuizierApp
         {
             int timeLimitMinutes = AppData.QuizTimeLimitMinutes;
 
-            // Safety check for lblTimer existence
             if (this.lblTimer == null)
             {
                 Console.WriteLine("ERROR: lblTimer control not found by InitializeQuizTimer.");
-                return; // Cannot proceed without the label
+                return; 
             }
 
             if (timeLimitMinutes > 0)
@@ -95,7 +93,7 @@ namespace QuizierApp
 
             if (_remainingSeconds <= 0)
             {
-                _quizTimer?.Stop(); // Safely stop timer
+                _quizTimer?.Stop(); 
                 _timeUp = true;
                 lblTimer.Text = "Time's Up!";
                 lblTimer.ForeColor = Color.Red;
@@ -117,7 +115,6 @@ namespace QuizierApp
 
         private void UpdateTimerDisplay()
         {
-            // Check visibility and existence again for safety
             if (lblTimer != null && lblTimer.Visible)
             {
                 TimeSpan timeSpan = TimeSpan.FromSeconds(_remainingSeconds);
@@ -128,7 +125,7 @@ namespace QuizierApp
         // --- Question Loading & Handling Methods ---
         private void LoadQuestion(int index)
         {
-            if (index < 0 || index >= _quizQuestions.Count) return; // Bounds check
+            if (index < 0 || index >= _quizQuestions.Count) return; 
 
             Question currentQuestion = _quizQuestions[index];
 
@@ -176,7 +173,7 @@ namespace QuizierApp
                 return;
             }
             _userAnswers[_currentQuestionIndex] = selectedAnswer;
-            if (gbOptions != null) gbOptions.Enabled = false; // Disable options after answering
+            if (gbOptions != null) gbOptions.Enabled = false; 
 
             _currentQuestionIndex++;
             if (_currentQuestionIndex < _quizQuestions.Count)
@@ -185,7 +182,7 @@ namespace QuizierApp
             }
             else
             {
-                _quizTimer?.Stop(); // Stop timer before final calculation
+                _quizTimer?.Stop(); 
                 CalculateAndSaveScore();
                 DisplayResults(false);
                 this.DialogResult = DialogResult.OK;
@@ -196,7 +193,7 @@ namespace QuizierApp
         private void QuizForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _quizTimer?.Stop();
-            _quizTimer?.Dispose(); // Dispose timer resources
+            _quizTimer?.Dispose(); 
         }
 
 
@@ -204,7 +201,7 @@ namespace QuizierApp
         private void CalculateAndSaveScore()
         {
             _score = 0;
-            if (_quizQuestions == null) return; // Safety check
+            if (_quizQuestions == null) return; 
 
             for (int i = 0; i < _quizQuestions.Count; i++)
             {
@@ -218,12 +215,12 @@ namespace QuizierApp
             }
 
             QuizResult result = new QuizResult(_username, _subject, _score, _quizQuestions.Count, DateTime.Now);
-            AppData.AllScores.Add(result); // Assumes AppData exists
+            AppData.AllScores.Add(result); 
         }
 
         private void DisplayResults(bool timedOut)
         {
-            int totalQuestions = _quizQuestions?.Count ?? 0; // Handle null list
+            int totalQuestions = _quizQuestions?.Count ?? 0; 
             double percentage = totalQuestions > 0 ? ((double)_score / totalQuestions) * 100.0 : 0.0;
             string timeMessage = timedOut ? "\n(Quiz ended because time ran out)" : "";
 
@@ -234,5 +231,5 @@ namespace QuizierApp
                 MessageBoxIcon.Information);
         }
 
-    } // End Class
-} // End Namespace
+    } 
+} 

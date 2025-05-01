@@ -5,10 +5,10 @@ namespace QuizierApp
 {
     public partial class AddQuestionForm : Form
     {
-        private string _subject; // Used when adding a new question
-        private readonly Question _editingQuestion; // Null if adding, set if editing
+        private string _subject; 
+        private readonly Question _editingQuestion; 
 
-        // Constructor for ADDING a new question
+     
         public AddQuestionForm(string subject) : this()
         {
             _subject = subject;
@@ -17,7 +17,7 @@ namespace QuizierApp
             btnSaveQuestion.Text = "Save Question";
         }
 
-        // Constructor for EDITING an existing question
+       
         public AddQuestionForm(Question questionToEdit) : this()
         {
             _editingQuestion = questionToEdit;
@@ -29,13 +29,13 @@ namespace QuizierApp
             btnSaveQuestion.Text = "Update Question";
         }
 
-        // Default constructor
+   
         private AddQuestionForm()
         {
-            InitializeComponent(); // Called from Designer
+            InitializeComponent(); 
         }
 
-        // Populate fields for editing mode
+        
         private void PopulateFieldsForEdit()
         {
             if (_editingQuestion == null) return;
@@ -56,7 +56,7 @@ namespace QuizierApp
             }
         }
 
-        // Save or update question
+        
         private void btnSaveQuestion_Click(object sender, EventArgs e)
         {
             string questionText = txtQuestion.Text.Trim();
@@ -89,7 +89,7 @@ namespace QuizierApp
 
             if (_editingQuestion == null)
             {
-                // ADDING MODE
+           
                 Question newQuestion = new Question(_subject, questionText, optionA, optionB, optionC, optionD, correctAnswer);
                 AppData.AllQuestions.Add(newQuestion);
 
@@ -99,7 +99,7 @@ namespace QuizierApp
             }
             else
             {
-                // EDITING MODE
+                
                 _editingQuestion.QuestionText = questionText;
                 _editingQuestion.OptionA = optionA;
                 _editingQuestion.OptionB = optionB;
@@ -113,7 +113,7 @@ namespace QuizierApp
             }
         }
 
-        // Clears the form after adding
+       
         private void ClearFormFields()
         {
             txtQuestion.Clear();
@@ -124,7 +124,7 @@ namespace QuizierApp
             rbCorrectA.Checked = true;
         }
 
-        // Cancel/Close button handler
+    
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

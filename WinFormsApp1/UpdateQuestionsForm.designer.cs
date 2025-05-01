@@ -1,17 +1,13 @@
-﻿// filename: UpdateQuestionsForm.Designer.cs
+﻿
 
 namespace QuizierApp
 {
     partial class UpdateQuestionsForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+        
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
+        
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -24,10 +20,7 @@ namespace QuizierApp
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+       
         private void InitializeComponent()
         {
             // --- Instantiating Controls ---
@@ -35,7 +28,7 @@ namespace QuizierApp
             this.lstQuestions = new System.Windows.Forms.ListBox();
             this.grpEditArea = new System.Windows.Forms.GroupBox();
             this.grpCorrectAnswer = new System.Windows.Forms.GroupBox();
-            this.rbCorrectD = new System.Windows.Forms.RadioButton(); // Declare D first for TabIndex flow
+            this.rbCorrectD = new System.Windows.Forms.RadioButton(); 
             this.rbCorrectC = new System.Windows.Forms.RadioButton();
             this.rbCorrectB = new System.Windows.Forms.RadioButton();
             this.rbCorrectA = new System.Windows.Forms.RadioButton();
@@ -54,9 +47,9 @@ namespace QuizierApp
             this.labelSelectSubject = new System.Windows.Forms.Label();
             this.labelSelectQuestion = new System.Windows.Forms.Label();
             this.btnDeleteQuestion = new System.Windows.Forms.Button();
-            this.grpEditArea.SuspendLayout(); // GroupBox needs Suspend/Resume
+            this.grpEditArea.SuspendLayout(); 
             this.grpCorrectAnswer.SuspendLayout();
-            this.SuspendLayout(); // Form needs Suspend/Resume
+            this.SuspendLayout(); 
 
             //
             // labelSelectSubject
@@ -81,7 +74,6 @@ namespace QuizierApp
             this.cmbSubjects.Name = "cmbSubjects";
             this.cmbSubjects.Size = new System.Drawing.Size(261, 23); // Font set on Form
             this.cmbSubjects.TabIndex = 1;
-            // Event Handler attached in UpdateQuestionsForm.cs
             //
             // labelSelectQuestion
             //
@@ -103,12 +95,12 @@ namespace QuizierApp
             this.lstQuestions.ItemHeight = 15; // Based on Form's default font
             this.lstQuestions.Location = new System.Drawing.Point(15, 68);
             this.lstQuestions.Name = "lstQuestions";
-            // Use Anchors for flexible height
+         
             this.lstQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstQuestions.Size = new System.Drawing.Size(354, 437); // Adjusted height calculation for anchors
+            this.lstQuestions.Size = new System.Drawing.Size(354, 437); 
             this.lstQuestions.TabIndex = 3;
-            // Event Handler attached in UpdateQuestionsForm.cs
+          
             //
             // grpEditArea
             //
@@ -138,7 +130,7 @@ namespace QuizierApp
             // grpCorrectAnswer
             //
             this.grpCorrectAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right))); // Anchor to bottom of parent groupbox
+            | System.Windows.Forms.AnchorStyles.Right))); 
             this.grpCorrectAnswer.Controls.Add(this.rbCorrectD);
             this.grpCorrectAnswer.Controls.Add(this.rbCorrectC);
             this.grpCorrectAnswer.Controls.Add(this.rbCorrectB);
@@ -256,7 +248,7 @@ namespace QuizierApp
             this.txtOptionB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOptionB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOptionB.ForeColor = System.Drawing.Color.White;
-            this.txtOptionB.Location = new System.Drawing.Point(78, 240); // Adjusted Y
+            this.txtOptionB.Location = new System.Drawing.Point(78, 240); 
             this.txtOptionB.Name = "txtOptionB";
             this.txtOptionB.Size = new System.Drawing.Size(333, 25);
             this.txtOptionB.TabIndex = 5;
@@ -266,7 +258,7 @@ namespace QuizierApp
             this.labelOptionB.AutoSize = true;
             this.labelOptionB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.labelOptionB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.labelOptionB.Location = new System.Drawing.Point(16, 243); // Adjusted Y
+            this.labelOptionB.Location = new System.Drawing.Point(16, 243); 
             this.labelOptionB.Name = "labelOptionB";
             this.labelOptionB.Size = new System.Drawing.Size(64, 17);
             this.labelOptionB.TabIndex = 4;
@@ -280,7 +272,7 @@ namespace QuizierApp
             this.txtOptionA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOptionA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOptionA.ForeColor = System.Drawing.Color.White;
-            this.txtOptionA.Location = new System.Drawing.Point(78, 201); // Adjusted Y
+            this.txtOptionA.Location = new System.Drawing.Point(78, 201);
             this.txtOptionA.Name = "txtOptionA";
             this.txtOptionA.Size = new System.Drawing.Size(333, 25);
             this.txtOptionA.TabIndex = 3;
@@ -290,7 +282,7 @@ namespace QuizierApp
             this.labelOptionA.AutoSize = true;
             this.labelOptionA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.labelOptionA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.labelOptionA.Location = new System.Drawing.Point(16, 204); // Adjusted Y
+            this.labelOptionA.Location = new System.Drawing.Point(16, 204); 
             this.labelOptionA.Name = "labelOptionA";
             this.labelOptionA.Size = new System.Drawing.Size(65, 17);
             this.labelOptionA.TabIndex = 2;
@@ -301,7 +293,7 @@ namespace QuizierApp
             this.txtQuestionText.AcceptsReturn = true;
             this.txtQuestionText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right))); // Allow vertical resize
+            | System.Windows.Forms.AnchorStyles.Right))); 
             this.txtQuestionText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txtQuestionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuestionText.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -310,7 +302,7 @@ namespace QuizierApp
             this.txtQuestionText.Multiline = true;
             this.txtQuestionText.Name = "txtQuestionText";
             this.txtQuestionText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtQuestionText.Size = new System.Drawing.Size(392, 140); // Adjusted height calculation
+            this.txtQuestionText.Size = new System.Drawing.Size(392, 140);
             this.txtQuestionText.TabIndex = 1;
             //
             // labelQuestionText
@@ -328,18 +320,18 @@ namespace QuizierApp
             //
             this.btnSaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right))); // Anchor bottom-right
             this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0))))); // Greenish (match Save button)
-            this.btnSaveChanges.Enabled = false; // Initially disabled
+            this.btnSaveChanges.Enabled = false; 
             this.btnSaveChanges.FlatAppearance.BorderSize = 0;
             this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveChanges.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
-            this.btnSaveChanges.Location = new System.Drawing.Point(559, 469); // Adjusted position
+            this.btnSaveChanges.Location = new System.Drawing.Point(559, 469); 
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(120, 35); // Match Save/Cancel size
+            this.btnSaveChanges.Size = new System.Drawing.Size(120, 35); 
             this.btnSaveChanges.TabIndex = 5;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
-            // Event Handler attached in UpdateQuestionsForm.cs
+      
             //
             // btnClose
             //
@@ -350,22 +342,22 @@ namespace QuizierApp
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(699, 469); // Adjusted position
+            this.btnClose.Location = new System.Drawing.Point(699, 469); 
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(120, 35); // Match Save/Cancel size
+            this.btnClose.Size = new System.Drawing.Size(120, 35); 
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            // Event Handler attached in UpdateQuestionsForm.cs
+            
             //
             // UpdateQuestionsForm
             //
-            this.AcceptButton = this.btnSaveChanges; // Enter key triggers save
+            this.AcceptButton = this.btnSaveChanges; 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45))))); // Dark background
-            this.CancelButton = this.btnClose; // Escape key triggers close
-            this.ClientSize = new System.Drawing.Size(834, 521); // Maintain overall size
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45))))); 
+            this.CancelButton = this.btnClose; 
+            this.ClientSize = new System.Drawing.Size(834, 521); 
             this.Controls.Add(this.labelSelectQuestion);
             this.Controls.Add(this.labelSelectSubject);
             this.Controls.Add(this.btnClose);
@@ -389,16 +381,16 @@ namespace QuizierApp
             // btnDeleteQuestion
             //
             this.btnDeleteQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteQuestion.BackColor = System.Drawing.Color.Firebrick; // Example color
-            this.btnDeleteQuestion.Enabled = false; // Initially disabled
+            this.btnDeleteQuestion.BackColor = System.Drawing.Color.Firebrick; 
+            this.btnDeleteQuestion.Enabled = false; 
             this.btnDeleteQuestion.FlatAppearance.BorderSize = 0;
             this.btnDeleteQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteQuestion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteQuestion.Location = new System.Drawing.Point(419, 469); // *** ADJUST POSITION ***
+            this.btnDeleteQuestion.Location = new System.Drawing.Point(419, 469); 
             this.btnDeleteQuestion.Name = "btnDeleteQuestion";
-            this.btnDeleteQuestion.Size = new System.Drawing.Size(120, 35); // *** ADJUST SIZE ***
-            this.btnDeleteQuestion.TabIndex = 7; // *** ADJUST TAB INDEX ***
+            this.btnDeleteQuestion.Size = new System.Drawing.Size(120, 35); 
+            this.btnDeleteQuestion.TabIndex = 7; 
             this.btnDeleteQuestion.Text = "Delete Question";
             this.btnDeleteQuestion.UseVisualStyleBackColor = false;
 
@@ -408,7 +400,7 @@ namespace QuizierApp
 
         #endregion
 
-        // --- Control Declarations (Keep these matching the above) ---
+        
         private System.Windows.Forms.ComboBox cmbSubjects;
         private System.Windows.Forms.ListBox lstQuestions;
         private System.Windows.Forms.GroupBox grpEditArea;

@@ -1,16 +1,12 @@
-﻿// QuizForm.Designer.cs
+﻿
 namespace QuizierApp
 {
     partial class QuizForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+   
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
+       
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -28,10 +24,7 @@ namespace QuizierApp
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        
         private void InitializeComponent()
         {
             this.lblTimer = new System.Windows.Forms.Label();
@@ -51,9 +44,9 @@ namespace QuizierApp
             this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTimer.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblTimer.Location = new System.Drawing.Point(629, 20); // Adjust position as needed
+            this.lblTimer.Location = new System.Drawing.Point(629, 20); 
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(133, 20);   // Adjust size as needed
+            this.lblTimer.Size = new System.Drawing.Size(133, 20);   
             this.lblTimer.TabIndex = 4;
             this.lblTimer.Text = "Time Left: 00:00";
             this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,13 +157,13 @@ namespace QuizierApp
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(609, 405); // Adjust position
+            this.btnNext.Location = new System.Drawing.Point(609, 405); 
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(140, 45);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
-            // --- Attach Event Handler ---
+            
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             //
             // QuizForm
@@ -180,7 +173,7 @@ namespace QuizierApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(774, 471);
-            this.Controls.Add(this.lblTimer); // Ensure timer label is added
+            this.Controls.Add(this.lblTimer); 
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.gbOptions);
             this.Controls.Add(this.lblQuestionText);
@@ -208,5 +201,5 @@ namespace QuizierApp
         private System.Windows.Forms.RadioButton rbOptionA;
         private System.Windows.Forms.Button btnNext;
 
-    } // End Class
-} // End Namespace
+    } 
+} 
